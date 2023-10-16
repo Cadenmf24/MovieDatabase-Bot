@@ -1,5 +1,5 @@
 services:
-  - postgres:15
+  - postgres:14
 
 variables:
   POSTGRES_DB: movieDatabase
