@@ -8,7 +8,7 @@ CREATE TABLE movies(
 );
 
 CREATE TABLE movieRatings(
-    id SERIAL PRIMARY Key NOT NULL,
+    movieId INT NOT NULL,
     revieweeName TEXT NOT NULL,
     rating INT NOT NULL
 );
@@ -16,8 +16,7 @@ CREATE TABLE movieRatings(
 INSERT INTO movies(movieName, releaseDate) VALUES
 ('The Untold Truth', '2023-01-01');
 
-INSERT INTO movieRatings(id, revieweeName, rating) VALUES
+INSERT INTO movieRatings(movieId, revieweeName, rating) VALUES
 (1, 'Ash', 5);
 
 
-SELECT movieName, rating FROM movies INNER JOIN movieRatings ON movies.id = movieRatings.id
